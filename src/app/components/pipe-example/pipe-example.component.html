@@ -1,0 +1,20 @@
+<!--Разметка ко 1-й задаче-->
+<div *ngFor="let user of (users | pipeExample: category: direction)" >
+  <ul>
+    <li>{{user.name}}</li>
+    <li>{{user.age}}</li>
+  </ul>
+</div>
+<button [textContent]="toggleCategory?'Not sort':'Sort'" (click)='onclickHandlerCategory()'></button>
+<button [textContent]="toggleDirection?'Up':'Down'" (click)='onclickHandlerDirection()'></button>
+
+<!--Разметка ко 2-й задаче-->
+<p >{{dataComment | getData}}</p>
+<button (click)='handlerClick_1()'>Tолько что</button>
+<button (click)='handlerClick_2()'>Прошло больше одной минуты назад</button>
+<button (click)='handlerClick_3()'>Прошло больше одного часа назад</button>
+<button (click)='handlerClick_4()'>Прошло больше суток назад</button>
+
+
+
+
